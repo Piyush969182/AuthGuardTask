@@ -1,20 +1,38 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FirstComponent } from './first/first.component';
-import { AdminGuard } from './Guard/admin.guard';
-import { LoginComponent } from './login/login.component';
+import { AdminGuard } from './core/guard/admin.guard';
+import { AddUserComponent } from './presentation/modules/add-user/add-user.component';
+import { EditUserComponent } from './presentation/modules/edit-user/edit-user.component';
+import { HomeComponent } from './presentation/modules/home/home.component';
+import { LoginComponent } from './presentation/modules/login/login.component';
 
 const routes: Routes = [
   {
-    path:'login',
-    component:LoginComponent
+    path: '',
+    component: LoginComponent
   },
   {
-    path:'first',
-    component:FirstComponent,
-    canActivate:[AdminGuard],
-
-  }
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AdminGuard],
+    data: {
+      role: 'public'
+    }
+  },
+  {
+    path: 'add',
+    component: AddUserComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'edit/:userId',
+    component: EditUserComponent,
+    canActivate: [AdminGuard],
+  },
 ];
 
 @NgModule({

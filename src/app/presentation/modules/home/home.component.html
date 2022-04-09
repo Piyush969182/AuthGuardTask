@@ -1,0 +1,28 @@
+<h2>Home</h2>
+<button (click)="Logout()">Logout</button>
+<button routerLink="../add">AddUser</button>
+<div class="table-responsive">
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Mobile</td>
+            <td>Gender</td>
+            <td>View</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of Userlist">
+                <td>{{list.userId}}</td>
+                <td>{{list.name}}</td>
+                <td>{{list.email}}</td>
+                <td>{{list.mobile}}</td>
+                <td>{{list.gender}}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" [routerLink]="['../edit',list.userId]">Edit</button>&nbsp;
+                    <button class="btn btn-primary btn-sm" (click)="DeleteUser(list.userId)">Delete</button>&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
