@@ -5,12 +5,13 @@ import { AddUserComponent } from './presentation/modules/add-user/add-user.compo
 import { EditUserComponent } from './presentation/modules/edit-user/edit-user.component';
 import { HomeComponent } from './presentation/modules/home/home.component';
 import { LoginComponent } from './presentation/modules/login/login.component';
-
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent
   },
+  // {
+  //   path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)  },
   {
     path: 'login',
     component: LoginComponent

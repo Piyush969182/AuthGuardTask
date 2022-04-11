@@ -1,7 +1,7 @@
 <h2>Home</h2>
 <button (click)="Logout()">Logout</button>
 <button routerLink="../add">AddUser</button>
-<div class="table-responsive">
+<div class="table-responsive" datatable [dtOptions]="dtOptions">
     <table>
         <thead>
             <td>Id</td>

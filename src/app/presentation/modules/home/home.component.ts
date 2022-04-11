@@ -11,7 +11,14 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private loginService: LoginServiceService) { }
   Userlist: any
+  dtOptions:DataTables.Settings={};
   ngOnInit(): void {
+    this.dtOptions={
+      pagingType:'full_numbers',
+      pageLength:5,
+      lengthMenu:[5,10,15],
+      processing:true
+    },
     this.loginService.getData().subscribe(response => {
       console.log(response)
       this.Userlist = response

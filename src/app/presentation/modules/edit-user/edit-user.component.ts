@@ -14,6 +14,7 @@ export class EditUserComponent implements OnInit {
   details = {}
   constructor(private fb: FormBuilder, private service: LoginServiceService, private router: Router,  private route: ActivatedRoute,) {
     this.User = this.fb.group({
+      userId:[''],
       name: [''],
       email: [''],
       mobile: [''],
