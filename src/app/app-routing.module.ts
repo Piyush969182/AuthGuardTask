@@ -6,23 +6,20 @@ import { EditUserComponent } from './presentation/modules/edit-user/edit-user.co
 import { HomeComponent } from './presentation/modules/home/home.component';
 import { LoginComponent } from './presentation/modules/login/login.component';
 const routes: Routes = [
-  {
-    path: '',
-    component: LoginComponent
-  },
   // {
-  //   path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)  },
+  //   path: 'login', loadChildren: () => import('./presentation/modules/login/login.module').then(m => m.LoginModule)
+  // },
   {
-    path: 'login',
-    component: LoginComponent
+    path:'',
+    component:LoginComponent
   },
   {
     path: 'home',
     component: HomeComponent,
     canActivate: [AdminGuard],
-    data: {
-      role: 'public'
-    }
+    // data: {
+    //   role: 'public'
+    // }
   },
   {
     path: 'add',

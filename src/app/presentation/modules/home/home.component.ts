@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
   Logout() {
     localStorage.removeItem('token')
-    this.router.navigateByUrl('/login')
+    this.router.navigateByUrl('login')
   }
   DeleteUser(userId: number) {
     this.loginService.deleteUser(userId).subscribe(response => {
