@@ -15,9 +15,9 @@ import { DataTablesModule } from 'angular-datatables';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
-    AddUserComponent,
-    EditUserComponent
+    // HomeComponent,
+    // AddUserComponent,
+    // EditUserComponent
   ],
   imports: [
     BrowserModule,

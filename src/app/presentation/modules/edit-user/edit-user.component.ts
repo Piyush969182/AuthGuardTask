@@ -33,7 +33,7 @@ export class EditUserComponent implements OnInit {
     console.log(this.User.value)
     this.service.updateData(this.User.value).subscribe(response => {
       console.log(response);
-      this.router.navigateByUrl('home')
+      this.router.navigateByUrl('login/home')
     })
   }
 }

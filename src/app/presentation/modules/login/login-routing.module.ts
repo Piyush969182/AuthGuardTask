@@ -7,7 +7,28 @@ import { HomeComponent } from '../home/home.component';
 import { LoginComponent } from './login.component';
 
 const routes: Routes = [
-  
+  {
+    path:'',
+    component:LoginComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AdminGuard],
+    // data: {
+    //   role: 'public'
+    // }
+  },
+  {
+    path: 'add',
+    component: AddUserComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'edit/:userId',
+    component: EditUserComponent,
+    canActivate: [AdminGuard],
+  },
 ];
 
 @NgModule({
