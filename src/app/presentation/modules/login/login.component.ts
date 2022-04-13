@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
       this.loginService.Login(this.login.value).subscribe(s => {
         console.log(s)
         this.response = s
-        localStorage.setItem('token', this.response.token)
-        this.router.navigateByUrl('login/home')
+        localStorage.setItem('token', this.response.token);
+        this.router.navigateByUrl('login/home');
       },
         err => {
           alert("Login failed");

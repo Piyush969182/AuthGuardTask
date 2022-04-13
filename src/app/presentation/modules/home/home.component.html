@@ -1,15 +1,20 @@
 <h2>Home</h2>
 <button (click)="Logout()">Logout</button>
 <button routerLink="../add">AddUser</button>
-<div class="table-responsive">
-    <table>
+<div class="table-responsive" >
+ 
+</div>
+
+   <table id="datatableexample" class="row-border hover">
         <thead>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Mobile</td>
-            <td>Gender</td>
-            <td>View</td>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Mobile</td>
+                <td>Gender</td>
+                <td>View</td>
+            </tr>
         </thead>
         <tbody>
             <tr *ngFor="let list of Userlist">
@@ -25,4 +30,3 @@
             </tr>
         </tbody>
     </table>
-</div>
